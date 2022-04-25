@@ -13,7 +13,6 @@ export class PostsService {
 
   public findAll(): Array<PostModel> {
     this.logger.log('Returning all posts');
-
     return this.posts;
   }
 

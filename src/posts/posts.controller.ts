@@ -32,6 +32,13 @@ export class PostsController {
     return this.postsService.findAll();
   }
 
+  @Get('test')
+  @ApiOkResponse({ description: 'Posts retrieved successfully.' })
+  public findAll1(): string {
+    // return this.postsService.findAll();
+    return 'Hello World!';
+  }
+
   @Get(':id')
   @ApiOkResponse({ description: 'Post retrieved successfully.' })
   @ApiNotFoundResponse({ description: 'Post not found.' })
